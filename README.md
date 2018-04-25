@@ -68,6 +68,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 `npm install linkifyjs`
 
+**Installing NG http loader** from [github repo](https://github.com/mpalourdio/ng-http-loader)
+
+`npm install ng-http-loader --save`
+
 ### Deploying Project
 **Installing Firebase tools**
 

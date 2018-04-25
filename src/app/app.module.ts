@@ -21,6 +21,7 @@ import {AuthComponent} from './auth/auth.component';
 import {RegisterComponent} from './register/register.component';
 import {AuthService} from './services/auth.service';
 import {GuardService} from './services/guard.service';
+import {NgHttpLoaderModule} from 'ng-http-loader/ng-http-loader.module';
 
 const appRoutes: Routes = [
   {
@@ -77,6 +78,7 @@ const appRoutes: Routes = [
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireDatabaseModule,
     HttpClientModule,
+    NgHttpLoaderModule,
     ReactiveFormsModule
   ],
   providers: [
