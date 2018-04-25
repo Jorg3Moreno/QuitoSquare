@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="breadcrumb">
+    <a routerLink="/lugares">Lugares</a> / {{ lugar.nombre }}
+  </div>
+  <div class="jumbotron jumbotron-fluid">
+    <h1>{{ lugar.nombre }}</h1>
+    <hr/>
+    <small>{{ lugar.distancia }} km</small>
+    <br/>
+    <div class="container">
+      <p>{{ lugar.descripcion }}</p>
+      <b>Suscripcion: {{ lugar.plan}}</b>
+    </div>
+  </div>
+</div>
