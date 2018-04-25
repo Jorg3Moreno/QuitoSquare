@@ -72,6 +72,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 `npm install ng-http-loader --save`
 
+**Installing Angular 2 Toaster** from [github repo](https://github.com/stabzs/Angular2-Toaster)
+
+`npm install angular2-toaster`
+
+**add to angular-cli.json**
+
+`<link rel="stylesheet" type="text/css" href="/node_modules/angular2-toaster/toaster.min.css" />`
+
 ### Deploying Project
 **Installing Firebase tools**
 

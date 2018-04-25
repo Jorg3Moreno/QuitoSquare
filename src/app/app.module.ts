@@ -14,7 +14,7 @@ import {environment} from '../environments/environment';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {CrearComponent} from './crear/crear.component';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {LinkifystrPipe} from './pipes/linkifystr.pipe';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AuthComponent} from './auth/auth.component';
@@ -22,6 +22,8 @@ import {RegisterComponent} from './register/register.component';
 import {AuthService} from './services/auth.service';
 import {GuardService} from './services/guard.service';
 import {NgHttpLoaderModule} from 'ng-http-loader/ng-http-loader.module';
+import {ToasterModule} from 'angular2-toaster';
+import {MyInterceptor} from './services/my.interceptor';
 
 const appRoutes: Routes = [
   {
@@ -79,12 +81,18 @@ const appRoutes: Routes = [
     AngularFireDatabaseModule,
     HttpClientModule,
     NgHttpLoaderModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToasterModule.forRoot()
   ],
   providers: [
     LugaresService,
     AuthService,
-    GuardService
+    GuardService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MyInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
